@@ -2,10 +2,8 @@ import './App.css';
 import { NextUIProvider } from '@nextui-org/react';
 import Auto from './components/Auto';
 import { NewsProvider } from './context/NewsContext'
-import Show from './components/Show';
 import { WorldProvider } from './context/WorldContext';
-//import { WorldProvider } from './context/WorldContext';
-//import World from './components/World';
+import News from './components/News';
 
 function App() {
   return (
@@ -16,9 +14,6 @@ function App() {
           <NewsProvider>
             <Auto />
           </NewsProvider>
-          <WorldProvider>
-            <Show />
-          </WorldProvider>
         </header>
       </div>
     </NextUIProvider>
@@ -33,4 +28,9 @@ export default App;
           </NewsProvider>
           <WorldProvider>
             <World />
-          </WorldProvider> */
+          </WorldProvider> 
+          <WorldProvider>
+            <News />
+          </WorldProvider>
+          
+          */
