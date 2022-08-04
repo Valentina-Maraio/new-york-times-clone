@@ -1,87 +1,63 @@
-import React from 'react'
-import { Container, Card, Row, Col, Spacer } from "@nextui-org/react";
+import { Grid, Card, Button } from "@nextui-org/react";
 
 export default function Auto() {
-
     return (
-        <Container wrap gap={0}>
-            <Row gap={1}>
-                <Col>
-                    <Card >
-                        <Card.Body>
-                        </Card.Body>
-                    </Card>
-                </Col>
-                <Col>
-                    <Card >
-                        <Card.Body>
-                        </Card.Body>
-                    </Card>
-                </Col>
-            </Row>
-            <Spacer y={1} />
-            <Row gap={1}>
-                <Col>
-                    <Card >
-                        <Card.Body>
-                        </Card.Body>
-                    </Card>
-                </Col>
-                <Col>
-                    <Card >
-                        <Card.Body>
-                        </Card.Body>
-                    </Card>
-                </Col>
-                <Col>
-                    <Card >
-                        <Card.Body>
-                        </Card.Body>
-                    </Card>
-                </Col>
-            </Row>
-            <Spacer y={1} />
-            <Row gap={1}>
-                <Col>
-                    <Card >
-                        <Card.Body>
-                        </Card.Body>
-                    </Card>
-                </Col>
-                <Col>
-                    <Card >
-                        <Card.Body>
-                        </Card.Body>
-                    </Card>
-                </Col>
-            </Row>
-            <Spacer y={1} />
-            <Row gap={1}>
-                <Col>
-                    <Card >
-                        <Card.Body>
-                        </Card.Body>
-                    </Card>
-                </Col>
-                <Col>
-                    <Card >
-                        <Card.Body>
-                        </Card.Body>
-                    </Card>
-                </Col>
-                <Col>
-                    <Card >
-                        <Card.Body>
-                        </Card.Body>
-                    </Card>
-                </Col>
-                <Col>
-                    <Card >
-                        <Card.Body>
-                        </Card.Body>
-                    </Card>
-                </Col>
-            </Row>
-        </Container>
+        <Grid.Container gap={1} >
+            <Grid xs={6}>
+                <Card>
+                    <Button>Click</Button>
+                </Card>
+            </Grid>
+            <Grid xs={6}>
+                <Card>
+                    <Button>Click</Button>
+                </Card>
+            </Grid>
+            <Grid xs={6}>
+                <Card>
+                    <Button>Click</Button>
+                </Card>
+            </Grid>
+            <Grid xs={3}>
+                <Card>
+                    <Button>Click</Button>
+                </Card>
+            </Grid>
+            <Grid xs={3}>
+                <Card>
+                    <Button>Click</Button>
+                </Card>
+            </Grid>
+            <Grid xs={3}>
+                <Card>
+                    <Button>Click</Button>
+                </Card>
+            </Grid>
+            <Grid xs={6}>
+                <Card>
+                    <Button>Click</Button>
+                </Card>
+            </Grid>
+            <Grid xs={3}>
+                <Card>
+                    <Button>Click</Button>
+                </Card>
+            </Grid>
+            <Grid xs={3}>
+                <Card>
+                    <Button>Click</Button>
+                </Card>
+            </Grid>
+            <Grid xs={3}>
+                <Card>
+                    <Button>Click</Button>
+                </Card>
+            </Grid>
+            <Grid xs={6}>
+                <Card>
+                    <Button>Click</Button>
+                </Card>
+            </Grid>
+        </Grid.Container>
     );
 }
