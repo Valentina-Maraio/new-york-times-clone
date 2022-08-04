@@ -1,9 +1,11 @@
 import './App.css';
-import Home from './components/Home'
 import { NextUIProvider } from '@nextui-org/react';
+import Auto from './components/Auto';
 import { NewsProvider } from './context/NewsContext'
+import Show from './components/Show';
 import { WorldProvider } from './context/WorldContext';
-import World from './components/World';
+//import { WorldProvider } from './context/WorldContext';
+//import World from './components/World';
 
 function App() {
   return (
@@ -12,10 +14,10 @@ function App() {
         <header className="App-header">
           <h1>The New York Times</h1>
           <NewsProvider>
-            <Home />
+            <Auto />
           </NewsProvider>
           <WorldProvider>
-            <World />
+            <Show />
           </WorldProvider>
         </header>
       </div>
@@ -24,3 +26,11 @@ function App() {
 }
 
 export default App;
+
+/*
+          <NewsProvider>
+            <Home />
+          </NewsProvider>
+          <WorldProvider>
+            <World />
+          </WorldProvider> */
