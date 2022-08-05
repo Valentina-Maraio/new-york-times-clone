@@ -1,20 +1,18 @@
-import React, { useContext } from 'react';
-import { NewsContext} from '../context/NewsContext'
+import React from 'react'
+import { WorldProvider } from '../context/WorldContext'
+import Banner from './Banner'
+import World from './World'
+import Selection from './Selection'
 
 const Home = () => {
-    const [results] = useContext(NewsContext)
-    return (
-        <div>
-            {results.map((result) => {
-                return (
-                    <div>
-                        <h3>{result.title}</h3>
-                        <img src={result.thumbnail_standard} alt={result.title}/>
-                    </div>
-                )
-            })}
-        </div>
-    )
+  return (
+    <div>
+        <Banner />
+        <Selection />
+    </div>
+  )
 }
 
 export default Home
+
+
