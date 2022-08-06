@@ -4,7 +4,6 @@ import React, {useContext} from 'react'
 
 export default function Show() {
     const [results] = useContext(AllNewsContext)
-    //console.log(results[0].multimedia[2])
 
   return (
     <Grid.Container gap={2} justify="flex-start">
