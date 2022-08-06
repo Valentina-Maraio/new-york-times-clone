@@ -7,7 +7,7 @@ export default function Selection() {
             <Button.Group wrap gap={1} rounded animated>
                 <Grid>
                     <Link to={"/world"}>
-                        <Button bordered color="secondary">World</Button>
+                        <Button bordered>World</Button>
                     </Link>
                 </Grid>
                 <Grid>
