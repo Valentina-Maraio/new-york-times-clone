@@ -2,9 +2,9 @@ import React, { useState, useEffect, createContext} from 'react'
 import axios from 'axios';
 import newsCalls from '../api/apiCall'
 
-export const NewsContext = createContext();
+export const AllNewsContext = createContext();
 
-export const NewsProvider = ({children}) => {
+export const AllNewsProvider = ({children}) => {
 
     const [results, setResults] = useState([]);
 
@@ -24,6 +24,6 @@ export const NewsProvider = ({children}) => {
     }
 
   return (
-    <NewsContext.Provider value={[results, setResults]}>{children}</NewsContext.Provider>
+    <AllNewsContext.Provider value={[results, setResults]}>{children}</AllNewsContext.Provider>
   )
 }

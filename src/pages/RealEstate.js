@@ -1,10 +1,11 @@
 import React from 'react'
 import Selection from '../components/Selection'
+import Banner from '../components/Banner'
 
 const RealEstate = () => {
   return (
     <div>
-      <h1>News from the Real Estate</h1>
+      <Banner />
       <Selection />
     </div>
   )

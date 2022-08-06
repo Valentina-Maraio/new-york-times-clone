@@ -1,16 +1,19 @@
 import React from 'react'
-//import { NewsProvider } from '../context/NewsContext'
+import { AllNewsProvider } from '../context/AllNewsContext'
 //import { WorldProvider } from '../context/WorldContext'
 //import AllNews from './AllNews'
 import Banner from './Banner'
 import Selection from './Selection'
-//import Show from './Show'
+import Show from './Show'
 
 const Home = () => {
   return (
     <div>
       <Banner />
       <Selection />
+      <AllNewsProvider>
+        <Show />
+      </AllNewsProvider>
     </div>
   )
 }

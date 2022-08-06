@@ -1,9 +1,9 @@
 import { Card, Grid, Row, Text } from "@nextui-org/react";
-import {WorldContext} from '../context/WorldContext'
+import {AllNewsContext} from '../context/AllNewsContext'
 import React, {useContext} from 'react'
 
 export default function Show() {
-    const [results] = useContext(WorldContext)
+    const [results] = useContext(AllNewsContext)
     //console.log(results[0].multimedia[2])
 
   return (

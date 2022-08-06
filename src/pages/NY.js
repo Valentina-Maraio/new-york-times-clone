@@ -1,10 +1,11 @@
 import React from 'react'
+import Banner from '../components/Banner'
 import Selection from '../components/Selection'
 
 const NY = () => {
   return (
     <div>
-      <h1>News from NY</h1>
+      <Banner />
       <Selection />
     </div>
   )
