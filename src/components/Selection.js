@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 export default function Selection() {
     return (
         <Container>
-            <Button.Group wrap gap={1} rounded animated>
+            <Button.Group gap={1} rounded animated>
                 <Grid>
                     <Link to={"/world"}>
                         <Button bordered>World</Button>
@@ -26,7 +26,7 @@ export default function Selection() {
                     </Link>
                 </Grid>
             </Button.Group>
-            <Button.Group wrap gap={1} rounded animated>
+            <Button.Group gap={1} rounded animated>
                 <Grid>
                     <Link to={"/business"}>
                         <Button bordered color="warning">Business</Button>
@@ -43,7 +43,7 @@ export default function Selection() {
                     </Link>
                 </Grid>
             </Button.Group>
-            <Button.Group wrap gap={1} rounded animated >
+            <Button.Group gap={1} rounded animated >
                 <Grid>
                     <Link to={"/science"}>
                         <Button bordered color="warning">Science</Button>
@@ -70,7 +70,7 @@ export default function Selection() {
                     </Link>
                 </Grid>
             </Button.Group>
-            <Button.Group wrap gap={1} rounded animated >
+            <Button.Group gap={1} rounded animated >
                 <Grid>
                     <Link to={"/style"}>
                         <Button bordered color="warning">Style</Button>
@@ -92,7 +92,7 @@ export default function Selection() {
                     </Link>
                 </Grid>
             </Button.Group>
-            <Button.Group wrap gap={1} rounded animated >
+            <Button.Group gap={1} rounded animated >
                 <Grid>
                     <Link to={"/tmagazine"}>
                         <Button bordered color="warning">T Magazine</Button>
