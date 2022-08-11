@@ -12,17 +12,17 @@ export default function Show() {
           <Card isPressable onClick={()=>alert('ciao')}>
             <Card.Body css={{ p: 0 }}>
               <Card.Image
-              src={result.multimedia[2].url} alt={result.title}
+              src={result.multimedia && result.multimedia[2] ? result.multimedia[2].url : `https://via.placeholder.com/600/101824`} alt={result.title}
               ></Card.Image>
             </Card.Body>
             <Card.Footer css={{ justifyItems: "flex-start" }}>
               <Row wrap="wrap" justify="space-between" align="center">
                 <Text b>{result.title}</Text>
                 <Card.Divider />
-                <Text>{result.multimedia[2].caption}</Text>
+                <Text>{result.multimedia && result.multimedia[2] ? result.multimedia[2].caption : ''}</Text>
                 <Card.Divider />
                 <Text css={{ color: "$accents7", fontWeight: "$semibold", fontSize: "$sm" }}>
-                Copyright:  {result.multimedia[2].copyright}
+                Copyright:  {result.multimedia && result.multimedia[2] ? result.multimedia[2].copyright : 'free'}
                 </Text>
               </Row>              
             </Card.Footer>
