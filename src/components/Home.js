@@ -1,10 +1,13 @@
 import React from 'react'
 import { AllNewsProvider } from '../context/AllNewsContext'
-//import { WorldProvider } from '../context/WorldContext'
+import { ArtsProvider } from '../context/ArtsContext'
+import { WorldProvider } from '../context/WorldContext'
 //import AllNews from './AllNews'
 import Banner from './Banner'
 import Selection from './Selection'
-import Show from './Show'
+import AllNews from './AllNews'
+import Arts from '../pages/Arts'
+import World from '../pages/World'
 
 const Home = () => {
   return (
@@ -12,8 +15,14 @@ const Home = () => {
       <Banner />
       <Selection />
       <AllNewsProvider>
-        <Show />
+        <AllNews />
       </AllNewsProvider>
+      <ArtsProvider>
+        <Arts />
+      </ArtsProvider>
+      <WorldProvider>
+        <World />
+      </WorldProvider>
     </div>
   )
 }
