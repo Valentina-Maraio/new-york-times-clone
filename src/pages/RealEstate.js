@@ -1,12 +1,12 @@
 import React from 'react'
-import Selection from '../components/Selection'
+import Menu from '../components/Menu'
 import Banner from '../components/Banner'
 
 const RealEstate = () => {
   return (
     <div>
       <Banner />
-      <Selection />
+      <Menu />
     </div>
   )
 }

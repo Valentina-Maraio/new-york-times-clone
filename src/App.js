@@ -1,8 +1,8 @@
 import './App.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { NextUIProvider } from '@nextui-org/react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './components/Home';
-import Selection from './components/Selection'
 import Arts from './pages/Arts';
 import Books from './pages/Books';
 import Business from './pages/Business';
@@ -17,7 +17,6 @@ import Science from './pages/Science';
 import Sports from './pages/Sports';
 import Style from './pages/Style';
 import Tech from './pages/Tech';
-import TMagazine from './pages/TMagazine';
 import Travel from './pages/Travel'
 import US from './pages/US';
 import Theater from './pages/Theater';
@@ -31,7 +30,6 @@ function App() {
         <Router>
           <Routes>
             <Route path="/" element={<Home />}></Route>
-            <Route path="/selection" element={<Selection />}></Route>
             <Route path="/arts" element={<Arts />}></Route>
             <Route path="/books" element={<Books />}></Route>
             <Route path="/business" element={<Business />}></Route>
@@ -46,7 +44,6 @@ function App() {
             <Route path="/sports" element={<Sports />}></Route>
             <Route path="/style" element={<Style />}></Route>
             <Route path="/tech" element={<Tech />}></Route>
-            <Route path="/tmagazine" element={<TMagazine />}></Route>
             <Route path="/travel" element={<Travel />}></Route>
             <Route path="/us" element={<US />}></Route>
             <Route path="/theater" element={<Theater />}></Route>

@@ -1,12 +1,12 @@
 import React from 'react'
 import Banner from '../components/Banner'
-import Selection from '../components/Selection'
+import Menu from '../components/Menu'
 
 export default function World() {
   return (
     <>
       <Banner />
-      <Selection />
+      <Menu />
     </>
   );
 }
