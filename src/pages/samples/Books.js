@@ -1,26 +1,18 @@
 import React, { useContext } from 'react'
-import { BooksContext } from '../../context/BooksContext'
-import { Collapse, Text, Link, Spacer} from "@nextui-org/react";
+import { ScaryContext } from '../../context/ScaryContext'
 
 const Books = () => {
-  const [results] = useContext(BooksContext)
+  const [results] = useContext(ScaryContext)
   return (
     <div>
       <h2>Books</h2>
-      <Collapse.Group>
         {results.map((result) => (
           <>
-            <Collapse title={result.title}>
-              <Text>
-                {result.abstract}
-              </Text>
-              <Text b>{result.kicker}</Text>
-              <Spacer y={0.5} />
-              <Link target="_blank" color="success" href={result.url}>{result.url}</Link>
-            </Collapse>
+          <h3>{result.book_title}</h3>
+          <h6>{result.book_author}</h6>
+          <p>{result.summary}</p>
           </>
         ))}
-      </Collapse.Group>
     </div>
   )
 }

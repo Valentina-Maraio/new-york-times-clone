@@ -1,17 +1,17 @@
 import React from 'react'
 import { Image } from "@nextui-org/react";
-import Journalism from '../assets/ads/Journalism.png';
+import Subscribe from '../assets/ads/Subscribe.png';
 
-const FakeAds = () => {
+const Ads = () => {
   return (
       <Image
         width={'auto'}
         height={'auto'}
-        src={Journalism}
+        src={Subscribe}
         alt="Default Image"
         autoResize={true}
       />
   )
 }
 
-export default FakeAds
+export default Ads
