@@ -1,47 +1,51 @@
-import React from 'react'
-import Carousel from 'react-bootstrap/Carousel';
+import React, { useContext } from 'react';
+import { Carousel } from 'primereact/carousel';
+import './CarouselDemo.css';
+import { FoodContext } from '../../context/FoodContext';
 
 const Food = () => {
+  const [results] = useContext(FoodContext)
+  const responsiveOptions = [
+    {
+      breakpoint: '1024px',
+      numVisible: 3,
+      numScroll: 3
+    },
+    {
+      breakpoint: '600px',
+      numVisible: 2,
+      numScroll: 2
+    },
+    {
+      breakpoint: '480px',
+      numVisible: 1,
+      numScroll: 1
+    }
+  ];
+
+  const resultTemplate = (result) => {
+    return (
+      <div className="product-item">
+        <div className="product-item-content">
+          <div className="mb-3">
+            <img
+              src={result.multimedia && result.multimedia[1] ? result.multimedia[1].url : `https://via.placeholder.com/600/101824`}
+              alt={result.title} />
+          </div>
+          <div>
+            <h4 className="mb-1">{result.title}</h4>
+            <h6 className="mt-0 mb-3">{result.caption}</h6>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
-    <Carousel fade>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src={`https://via.placeholder.com/600/332241`}
-          alt="First slide"
-        />
-        <Carousel.Caption>
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src={`https://via.placeholder.com/600/332241`}
-          alt="Second slide"
-        />
-
-        <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src={`https://via.placeholder.com/600/332241`}
-          alt="Third slide"
-        />
-
-        <Carousel.Caption>
-          <h3>Third slide label</h3>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-          </p>
-        </Carousel.Caption>
-      </Carousel.Item>
-    </Carousel>
+    <div className="card">
+      <Carousel value={results} numVisible={3} numScroll={1} responsiveOptions={responsiveOptions} className="custom-carousel" circular
+        autoplayInterval={4000} itemTemplate={resultTemplate} />
+    </div>
   )
 }
 

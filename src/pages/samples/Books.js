@@ -1,106 +1,28 @@
-import React from 'react'
-import { PanelMenu } from 'primereact/panelmenu';
+import React, { useContext } from 'react'
+import { BooksContext } from '../../context/BooksContext'
+import { Collapse, Text, Link, Spacer} from "@nextui-org/react";
 
 const Books = () => {
-  const items = [
-    {
-      label: 'File',
-      icon: 'pi pi-fw pi-file',
-      items: [
-        {
-          label: 'New',
-          icon: 'pi pi-fw pi-plus',
-        },
-        {
-          label: 'Delete',
-          icon: 'pi pi-fw pi-trash'
-        },
-        {
-          label: 'Export',
-          icon: 'pi pi-fw pi-external-link'
-        }
-      ]
-    },
-    {
-      label: 'Edit',
-      icon: 'pi pi-fw pi-pencil',
-      items: [
-        {
-          label: 'Left',
-          icon: 'pi pi-fw pi-align-left'
-        },
-        {
-          label: 'Right',
-          icon: 'pi pi-fw pi-align-right'
-        },
-        {
-          label: 'Center',
-          icon: 'pi pi-fw pi-align-center'
-        },
-        {
-          label: 'Justify',
-          icon: 'pi pi-fw pi-align-justify'
-        }
-      ]
-    },
-    {
-      label: 'Users',
-      icon: 'pi pi-fw pi-user',
-      items: [
-        {
-          label: 'New',
-          icon: 'pi pi-fw pi-user-plus'
-        },
-        {
-          label: 'Delete',
-          icon: 'pi pi-fw pi-user-minus'
-        },
-        {
-          label: 'Search',
-          icon: 'pi pi-fw pi-users',
-        }
-      ]
-    },
-    {
-      label: 'Events',
-      icon: 'pi pi-fw pi-calendar',
-      items: [
-        {
-          label: 'Edit',
-          icon: 'pi pi-fw pi-pencil',
-          items: [
-            {
-              label: 'Save',
-              icon: 'pi pi-fw pi-calendar-plus'
-            },
-            {
-              label: 'Delete',
-              icon: 'pi pi-fw pi-calendar-minus'
-            }
-          ]
-        },
-        {
-          label: 'Archieve',
-          icon: 'pi pi-fw pi-calendar-times',
-          items: [
-            {
-              label: 'Remove',
-              icon: 'pi pi-fw pi-calendar-minus'
-            }
-          ]
-        }
-      ]
-    }
-  ];
+  const [results] = useContext(BooksContext)
   return (
     <div>
-      <div className="card">
-      <h3>Books News</h3>
-        <PanelMenu model={items} style={{ width: '22rem' }} />
-      </div>
+      <h2>Books</h2>
+      <Collapse.Group>
+        {results.map((result) => (
+          <>
+            <Collapse title={result.title}>
+              <Text>
+                {result.abstract}
+              </Text>
+              <Text b>{result.kicker}</Text>
+              <Spacer y={0.5} />
+              <Link target="_blank" color="success" href={result.url}>{result.url}</Link>
+            </Collapse>
+          </>
+        ))}
+      </Collapse.Group>
     </div>
-  );
-
+  )
 }
 
 export default Books

@@ -1,10 +1,16 @@
 import React from 'react'
+import { Image } from "@nextui-org/react";
+import TheNewYorkTimes from '../assets/ads/TheNewYorkTimes.png';
 
 const Banner = () => {
     return (
-        <div>
-            <h1>The New York Times</h1>
-        </div>
+        <Image
+        width={'auto'}
+        height={'auto'}  
+        src={TheNewYorkTimes}
+        alt="Default Image"
+        autoResize={true}
+      />
     )
 }
 
