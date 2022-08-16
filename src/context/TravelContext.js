@@ -6,7 +6,9 @@ export const TravelContext = createContext();
 
 export const TravelProvider = ({children}) => {
 
+
     const [results, setResults] = useState([]);
+
 
     useEffect(()=>{getTravel()}, []);
 
@@ -19,6 +21,7 @@ export const TravelProvider = ({children}) => {
                 const response = await axios.get(newsCalls.travelNews)
                 localStorage.setItem('travelNews', JSON.stringify(response.data.results))
                 setResults(response.data.results)
+                console.log(response.data.results)
             }
         } catch(err){console.log(err)}
     }

@@ -17,7 +17,9 @@ const newsCalls = {
     styleNews: `https://api.nytimes.com/svc/topstories/v2/style.json?api-key=${process.env.REACT_APP_API_KEY}`, //25
     technologyNews: `https://api.nytimes.com/svc/topstories/v2/technology.json?api-key=${process.env.REACT_APP_API_KEY}`, //29
     tmagazineNews: `https://api.nytimes.com/svc/topstories/v2/tmagazine.json?api-key=${process.env.REACT_APP_API_KEY}`, //total 39
+
     travelNews: `https://api.nytimes.com/svc/topstories/v2/travel.json?api-key=${process.env.REACT_APP_API_KEY}`, //26
+
     usNews: `https://api.nytimes.com/svc/topstories/v2/us.json?api-key=${process.env.REACT_APP_API_KEY}`, //28
     theaterNews: `https://api.nytimes.com/svc/topstories/v2/theater.json?api-key=${process.env.REACT_APP_API_KEY}`, //34
     worldNews: `https://api.nytimes.com/svc/topstories/v2/world.json?api-key=${process.env.REACT_APP_API_KEY}`, //37

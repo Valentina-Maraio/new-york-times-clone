@@ -1,34 +1,34 @@
 import React, { useContext } from 'react'
 import { AllNewsContext } from '../context/AllNewsContext'
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
+import { Card, Grid, Row, Text } from "@nextui-org/react";
 
 function News() {
-    const [results] = useContext(AllNewsContext)
+    const [results] = useContext(AllNewsContext);
 
     return (
         <>
-            {results.map((result, id) => (
-                <Container>
-                    <Row key={id}>
-                        <Col xs={4}>
-                            <Card>
-                                <Card.Img variant="top" src={result.multimedia && result.multimedia[2] ? result.multimedia[2].url : `https://via.placeholder.com/600/101824`} alt={result.title} />
-                                <Card.Body>
-                                    <Card.Title>Card Title</Card.Title>
-                                    <Card.Text>
-                                    {result.multimedia && result.multimedia[2] ? result.multimedia[2].caption : ''}
-                                    </Card.Text>
-                                    <Button variant="primary">Go somewhere</Button>
-                                </Card.Body>
-                            </Card>
-                        </Col>
-                    </Row>
-                </Container>
-            ))}
+            <Grid.Container gap={2} justify="flex-start">
+                {results.map((result, id) => (
+                    <Grid xs={6} sm={3} key={id}>
+                        <Card isPressable>
+                            <Card.Body css={{ p: 0 }}>
+                                <Card.Image
+                                    src={result.multimedia && result.multimedia[2] ? result.multimedia[2].url : `https://via.placeholder.com/600/101824`}
+                                    alt={result.title}
+                                    objectFit="cover"
+                                    width="100%"
+                                    height={140}
+                                />
+                            </Card.Body>
+                            <Card.Footer css={{ justifyItems: "flex-start" }}>
+                                <Row wrap="wrap" justify="space-between" align="center">
+                                    <Text b>{result.title}</Text>
+                                </Row>
+                            </Card.Footer>
+                        </Card>
+                    </Grid>
+                ))}
+            </Grid.Container>
         </>
     );
 }
