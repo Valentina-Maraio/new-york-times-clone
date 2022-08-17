@@ -18,6 +18,6 @@ export const HealthProvider = ({ children }) => {
     }
 
     return (
-        <HealthProvider.Provider value={[results, setResults]}>{children}</HealthProvider.Provider>
+        <HealthContext.Provider value={[results, setResults]}>{children}</HealthContext.Provider>
     )
 }

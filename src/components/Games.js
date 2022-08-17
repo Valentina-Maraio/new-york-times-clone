@@ -15,7 +15,6 @@ const Games = () => {
       <Grid.Container gap={2} justify="center">
         <Grid xs={4}>
                 <Image
-                isHoverable
                   width={'auto'}
                   height={'auto'}
                   src={Chess}
