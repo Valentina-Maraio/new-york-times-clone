@@ -21,6 +21,23 @@ import Travel from './pages/Travel'
 import US from './pages/US';
 import Theater from './pages/Theater';
 import World from './pages/World';
+import { ArtsProvider } from './context/ArtsContext';
+import { BooksProvider } from './context/BooksContext';
+import { BusinessProvider } from './context/BusinessContext';
+import { FoodProvider } from './context/FoodContext';
+import { HealthProvider } from './context/HealthContext';
+import { MagazineProvider } from './context/MagazineContext';
+import { NYRegionProvider } from './context/NYRegionContext';
+import { OpinionProvider } from './context/OpinionContext';
+import { PoliticsProvider } from './context/PoliticsContext';
+import { RealEstateProvider } from './context/RealEstateContext';
+import { ScienceProvider } from './context/ScienceContext';
+import { SportsProvider } from './context/SportsContext';
+import { StyleProvider } from './context/StyleContext';
+import { TechnologyProvider } from './context/TechnologyContext';
+import { TheaterProvider } from './context/TheaterContext';
+import { TravelProvider } from './context/TravelContext';
+import { USProvider } from './context/USContext';
 
 
 function App() {
@@ -30,23 +47,23 @@ function App() {
         <Router>
           <Routes>
             <Route path="/" element={<Home />}></Route>
-            <Route path="/arts" element={<Arts />}></Route>
-            <Route path="/books" element={<Books />}></Route>
-            <Route path="/business" element={<Business />}></Route>
-            <Route path="/food" element={<Food />}></Route>
-            <Route path="/health" element={<Health />}></Route>
-            <Route path="/magazine" element={<Magazine />}></Route>
-            <Route path="/ny" element={<NY />}></Route>
-            <Route path="/opinion" element={<Opinion />}></Route>
-            <Route path="/politics" element={<Politics />}></Route>
-            <Route path="/realestate" element={<RealEstate />}></Route>
-            <Route path="/science" element={<Science />}></Route>
-            <Route path="/sports" element={<Sports />}></Route>
-            <Route path="/style" element={<Style />}></Route>
-            <Route path="/tech" element={<Tech />}></Route>
-            <Route path="/travel" element={<Travel />}></Route>
-            <Route path="/us" element={<US />}></Route>
-            <Route path="/theater" element={<Theater />}></Route>
+            <Route path="/arts" element={<ArtsProvider><Arts /></ArtsProvider>}></Route>
+            <Route path="/books" element={<BooksProvider><Books /></BooksProvider>}></Route>
+            <Route path="/business" element={<BusinessProvider><Business /></BusinessProvider>}></Route>
+            <Route path="/food" element={<FoodProvider><Food /></FoodProvider>}></Route>
+            <Route path="/health" element={<HealthProvider><Health /></HealthProvider>}></Route>
+            <Route path="/magazine" element={<MagazineProvider><Magazine /></MagazineProvider>}></Route>
+            <Route path="/ny" element={<NYRegionProvider><NY /></NYRegionProvider>}></Route>
+            <Route path="/opinion" element={<OpinionProvider><Opinion /></OpinionProvider>}></Route>
+            <Route path="/politics" element={<PoliticsProvider><Politics /></PoliticsProvider>}></Route>
+            <Route path="/realestate" element={<RealEstateProvider><RealEstate /></RealEstateProvider>}></Route>
+            <Route path="/science" element={<ScienceProvider><Science /></ScienceProvider>}></Route>
+            <Route path="/sports" element={<SportsProvider><Sports /></SportsProvider>}></Route>
+            <Route path="/style" element={<StyleProvider><Style /></StyleProvider>}></Route>
+            <Route path="/tech" element={<TechnologyProvider><Tech /></TechnologyProvider>}></Route>
+            <Route path="/theater" element={<TheaterProvider><Theater /></TheaterProvider>}></Route>
+            <Route path="/travel" element={<TravelProvider><Travel /></TravelProvider>}></Route>
+            <Route path="/us" element={<USProvider><US /></USProvider>}></Route>
             <Route path="/world" element={<World />}></Route>
           </Routes>
         </Router>
