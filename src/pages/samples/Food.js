@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { Carousel } from 'primereact/carousel';
 import './CarouselDemo.css';
 import { FoodContext } from '../../context/FoodContext';
+import { Spacer } from "@nextui-org/react";
 
 const Food = () => {
   const [results] = useContext(FoodContext)
@@ -29,7 +30,8 @@ const Food = () => {
         <div className="product-item-content">
           <div className="mb-3">
             <img
-              src={result.multimedia && result.multimedia[1] ? result.multimedia[1].url : `https://via.placeholder.com/600/101824`}
+              width={'300'}
+              src={result.multimedia && result.multimedia[1] ? result.multimedia[1].url : `https://via.placeholder.com/300/101824`}
               alt={result.title} />
           </div>
           <div>
@@ -43,8 +45,10 @@ const Food = () => {
 
   return (
     <div className="card">
+      <Spacer />
       <Carousel value={results} numVisible={3} numScroll={1} responsiveOptions={responsiveOptions} className="custom-carousel" circular
         autoplayInterval={4000} itemTemplate={resultTemplate} />
+        <Spacer />
     </div>
   )
 }

@@ -27,9 +27,10 @@ const Travel = () => {
     return (
       <div className="product-item">
         <div className="product-item-content">
-          <div className="mb-3">
+          <div className="mb-4">
             <img
-              src={result.multimedia && result.multimedia[1] ? result.multimedia[1].url : `https://via.placeholder.com/600/101824`}
+              width={'300'}
+              src={result.multimedia && result.multimedia[1] ? result.multimedia[1].url : `https://via.placeholder.com/300/101824`}
               alt={result.title} />
           </div>
           <div>

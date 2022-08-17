@@ -35,7 +35,7 @@ const Menu = () => {
 
               <Nav.Link href="/travel">Travel</Nav.Link>
               <Nav.Link href="/us">U.S.</Nav.Link>
-              <Nav.Link href="/wolrd">World</Nav.Link>
+              <Nav.Link href="/world">World</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>

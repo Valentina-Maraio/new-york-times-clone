@@ -38,6 +38,7 @@ import { TechnologyProvider } from './context/TechnologyContext';
 import { TheaterProvider } from './context/TheaterContext';
 import { TravelProvider } from './context/TravelContext';
 import { USProvider } from './context/USContext';
+import { WorldProvider} from './context/WorldContext';
 
 
 function App() {
@@ -64,7 +65,7 @@ function App() {
             <Route path="/theater" element={<TheaterProvider><Theater /></TheaterProvider>}></Route>
             <Route path="/travel" element={<TravelProvider><Travel /></TravelProvider>}></Route>
             <Route path="/us" element={<USProvider><US /></USProvider>}></Route>
-            <Route path="/world" element={<World />}></Route>
+            <Route path="/world" element={<WorldProvider><World /></WorldProvider>}></Route>
           </Routes>
         </Router>
       </NextUIProvider>

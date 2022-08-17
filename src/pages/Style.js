@@ -3,6 +3,7 @@ import { Card, Grid, Row, Text } from "@nextui-org/react";
 import { StyleContext } from '../context/StyleContext'
 import Banner from '../components/Banner';
 import Menu from '../components/Menu';
+import { Spacer } from "@nextui-org/react";
 
 const Style = () => {
   const [results] = useContext(StyleContext);
@@ -11,6 +12,7 @@ const Style = () => {
     <div>
       <Banner />
       <Menu />
+      <Spacer />
       <Grid.Container gap={2} justify="flex-start">
         {results.map((result, id) => (
           <Grid xs={6} sm={3} key={id}>

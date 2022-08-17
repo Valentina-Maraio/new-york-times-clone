@@ -7,7 +7,7 @@ import Menu from './Menu'
 import News from './News'
 import Games from './Games'
 import Previews from './Previews'
-import { Divider } from "@nextui-org/react";
+import { Spacer } from "@nextui-org/react";
 
 
 const Home = () => {
@@ -15,13 +15,18 @@ const Home = () => {
     <div>
       <Banner />
       <Menu />
+      <Spacer />
       <AllNewsProvider>
         <News />
       </AllNewsProvider>
+      <Spacer />
+      <Spacer />
       <FakeAds />
+      <Spacer />
       <Previews />
       <br />
-      <Divider />
+      <Spacer />
+      <Spacer />
       <Games />
       <Ads />
     </div>
