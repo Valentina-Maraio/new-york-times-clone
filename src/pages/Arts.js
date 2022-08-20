@@ -1,8 +1,6 @@
 import React, { useContext } from 'react'
 import { Card, Grid, Row, Text } from "@nextui-org/react";
 import { ArtsContext } from '../context/ArtsContext'
-import Banner from '../components/Banner';
-import Menu from '../components/Menu';
 import { Spacer } from "@nextui-org/react";
 
 
@@ -11,8 +9,6 @@ const Arts = () => {
 
   return (
     <div>
-      <Banner />
-      <Menu />
       <Spacer />
       <Grid.Container gap={2} justify="flex-start">
         {results.map((result, id) => (
