@@ -12,8 +12,14 @@ export const ScaryProvider = ({ children }) => {
 
     const getArts = async () => {
         try {
-            const response = await axios.get(newsCalls.scaryCall)
-            setResults(response.data.results)
+            const inLocalStorage = localStorage.getItem('scary')
+            if(inLocalStorage){
+                setResults(JSON.parse(inLocalStorage))
+            } else {
+                const response = await axios.get(newsCalls.scaryCall)
+                localStorage.setItem('scary', JSON.stringify(response.data.results))
+                setResults(response.data.results)
+            }
         } catch (err) { console.log(err) }
     }
 

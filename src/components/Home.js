@@ -6,6 +6,7 @@ import Menu from './Menu'
 import Games from './Games'
 import SpecialAuthor from '../pages/SpecialAuthor'
 import { Spacer } from "@nextui-org/react";
+import { ScaryProvider } from '../context/ScaryContext'
 
 
 const Home = () => {
@@ -16,7 +17,9 @@ const Home = () => {
       <Spacer />
       <FakeAds />
       <Spacer />
-      <SpecialAuthor />
+      <ScaryProvider>
+        <SpecialAuthor />
+      </ScaryProvider>
       <Spacer />
       <Games />
       <Ads />

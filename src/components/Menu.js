@@ -11,13 +11,6 @@ import NY from '../pages/NY';
 import Opinion from '../pages/Opinion';
 import Politics from '../pages/Politics';
 import RealEstate from '../pages/RealEstate';
-import Science from '../pages/Science';
-import Sports from '../pages/Sports';
-import Style from '../pages/Style';
-import Tech from '../pages/Tech';
-import Theater from '../pages/Theater';
-import Travel from '../pages/Travel'
-import World from '../pages/World';
 import { AllNewsProvider } from '../context/AllNewsContext'
 import { ArtsProvider } from '../context/ArtsContext';
 import { BooksProvider } from '../context/BooksContext';
@@ -29,13 +22,6 @@ import { NYRegionProvider } from '../context/NYRegionContext';
 import { OpinionProvider } from '../context/OpinionContext';
 import { PoliticsProvider } from '../context/PoliticsContext';
 import { RealEstateProvider } from '../context/RealEstateContext';
-import { ScienceProvider } from '../context/ScienceContext';
-import { SportsProvider } from '../context/SportsContext';
-import { StyleProvider } from '../context/StyleContext';
-import { TechnologyProvider } from '../context/TechnologyContext';
-import { TheaterProvider } from '../context/TheaterContext';
-import { TravelProvider } from '../context/TravelContext';
-import { WorldProvider } from '../context/WorldContext';
 
 
 function Menu() {
@@ -102,41 +88,6 @@ function Menu() {
                 <RealEstateProvider>
                     <RealEstate />
                 </RealEstateProvider>
-            </Tab>
-            <Tab eventKey="science" title="Science">
-                <ScienceProvider>
-                    <Science />
-                </ScienceProvider>
-            </Tab>
-            <Tab eventKey="sports" title="Sports">
-                <SportsProvider>
-                    <Sports />
-                </SportsProvider>
-            </Tab>
-            <Tab eventKey="style" title="Style">
-                <StyleProvider>
-                    <Style />
-                </StyleProvider>
-            </Tab>
-            <Tab eventKey="tech" title="Tech">
-                <TechnologyProvider>
-                    <Tech />
-                </TechnologyProvider>
-            </Tab>
-            <Tab eventKey="theater" title="Theater">
-                <TheaterProvider>
-                    <Theater />
-                </TheaterProvider>
-            </Tab>
-            <Tab eventKey="travel" title="Travel">
-                <TravelProvider>
-                    <Travel />
-                </TravelProvider>
-            </Tab>
-            <Tab eventKey="world" title="World">
-                <WorldProvider>
-                    <World />
-                </WorldProvider>
             </Tab>
         </Tabs>
     );
