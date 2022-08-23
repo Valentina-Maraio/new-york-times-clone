@@ -1,39 +1,36 @@
 import React, { useContext } from 'react'
-import { Card, Grid, Row, Text } from "@nextui-org/react";
 import { RealEstateContext } from '../context/RealEstateContext'
-import { Spacer } from "@nextui-org/react";
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Card from 'react-bootstrap/Card';
 
 const RealEstate = () => {
   const [results] = useContext(RealEstateContext);
 
   return (
-    <div>
-      <Spacer />
-      <Grid.Container gap={2} justify="flex-start">
-        {results.map((result, id) => (
-          <Grid xs={6} sm={3} key={id}>
-            <Card>
-              <Card.Body css={{ p: 0 }}>
-                <Card.Image
-                  src={result.multimedia && result.multimedia[2] ? result.multimedia[2].url : `https://via.placeholder.com/600/101824`} alt={result.title}
-                ></Card.Image>
+    <Container>
+      <Row xs={1} md={3} className="g-4">
+        {results.map((result) => (
+          <Col sm>
+            <Card border="dark" style={{ width: '18rem' }}>
+              <Card.Img variant="top" src={result.multimedia && result.multimedia[2] ? result.multimedia[2].url : `https://via.placeholder.com/600/101824`} alt={result.title} />
+              <Card.Body>
+                <Card.Title><h4>{result.title}</h4></Card.Title>
+                <Card.Text>
+                  <h6>
+                    {result.multimedia && result.multimedia[2] ? result.multimedia[2].caption : ''}
+                  </h6>
+                </Card.Text>
+                <Card.Text>
+                  <h6>Copyright:  {result.multimedia && result.multimedia[2] ? result.multimedia[2].copyright : 'free'}</h6>
+                </Card.Text>
               </Card.Body>
-              <Card.Footer css={{ justifyItems: "flex-start" }}>
-                <Row wrap="wrap" justify="space-between" align="center">
-                  <Text b>{result.title}</Text>
-                  <Card.Divider />
-                  <Text>{result.multimedia && result.multimedia[2] ? result.multimedia[2].caption : ''}</Text>
-                  <Card.Divider />
-                  <Text css={{ color: "$accents7", fontWeight: "$semibold", fontSize: "$sm" }}>
-                    Copyright:  {result.multimedia && result.multimedia[2] ? result.multimedia[2].copyright : 'free'}
-                  </Text>
-                </Row>
-              </Card.Footer>
             </Card>
-          </Grid>
+          </Col>
         ))}
-      </Grid.Container>
-    </div>
+      </Row>
+    </Container>
   )
 }
 
