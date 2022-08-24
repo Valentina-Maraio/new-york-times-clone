@@ -1,5 +1,4 @@
 import React from 'react'
-import { Spacer, Grid, Image } from "@nextui-org/react";
 import Chess from '../assets/games/Chess.png';
 import Crossword from '../assets/games/Crossword.png';
 import LetterBoxed from '../assets/games/LetterBoxed.png';
@@ -10,68 +9,28 @@ import Wordle from '../assets/games/Wordle.png';
 
 const Games = () => {
   return (
-    <div>
-      <Spacer />
-      <Grid.Container gap={2} justify="center">
-        <Grid xs={4}>
-                <Image
-                  width={'auto'}
-                  height={'auto'}
-                  src={Chess}
-                  alt="Default Image"
-                  autoResize={true}
-                />
-        </Grid>
-        <Grid xs={4}>
-                <Image
-                  width={'auto'}
-                  height={'auto'}
-                  src={Crossword}
-                  alt="Default Image"
-                  autoResize={true}
-                />
-         </Grid>
-        <Grid xs={4}>
-                <Image
-                  width={'auto'}
-                  height={'auto'}
-                  src={LetterBoxed}
-                  alt="Default Image"
-                  autoResize={true}
-                />
-        </Grid>
-      </Grid.Container>
-      <Grid.Container gap={2} justify="center">
-        <Grid xs={4}>
-                <Image
-                  width={'auto'}
-                  height={'auto'}
-                  src={SpellingBee}
-                  alt="Default Image"
-                  autoResize={true}
-                />
-        </Grid>
-        <Grid xs={4}>
-                <Image
-                  width={'auto'}
-                  height={'auto'}
-                  src={Tiles}
-                  alt="Default Image"
-                  autoResize={true}
-                />
-        </Grid>
-        <Grid xs={4}>
-                <Image
-                  width={'auto'}
-                  height={'auto'}
-                  src={Wordle}
-                  alt="Default Image"
-                  autoResize={true}
-                />
-        </Grid>
-      </Grid.Container>
-      <Spacer />
-    </div>
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-6">
+          <img src={Chess} class="rounded float-start mg-fluid" alt="chess" />
+          </div>
+          <div class="col-6">
+          <img src={Crossword} class="rounded float-start mg-fluid" alt="chess" />
+          </div>
+          <div class="col-6">
+          <img src={LetterBoxed} class="rounded float-start mg-fluid" alt="chess" />
+          </div>
+          <div class="col-6">
+          <img src={SpellingBee} class="rounded float-start mg-fluid" alt="chess" />
+          </div>
+          <div class="col-6">
+          <img src={Tiles} class="rounded float-start mg-fluid" alt="chess" />
+          </div>
+          <div class="col-6">
+          <img src={Wordle} class="rounded float-start mg-fluid" alt="chess" />
+          </div>
+        </div>
+      </div>
   )
 }
 
