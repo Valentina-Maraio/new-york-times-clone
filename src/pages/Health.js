@@ -1,36 +1,41 @@
 import React, { useContext } from 'react'
 import { HealthContext } from '../context/HealthContext'
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Card from 'react-bootstrap/Card';
+import { Card, Grid, Row, Text } from "@nextui-org/react";
 
 const Health = () => {
   const [results] = useContext(HealthContext);
 
   return (
-    <Container>
-      <Row xs={1} md={3} className="g-4">
+    <>
+      <Grid.Container gap={2} justify="flex-start">
         {results.map((result) => (
-          <Col sm>
-            <Card border="dark" style={{ width: '18rem' }}>
-              <Card.Img variant="top" src={result.multimedia && result.multimedia[2] ? result.multimedia[2].url : `https://via.placeholder.com/600/101824`} alt={result.title} />
-              <Card.Body>
-                <Card.Title><h4>{result.title}</h4></Card.Title>
-                <Card.Text>
-                  <h6>
-                    {result.multimedia && result.multimedia[2] ? result.multimedia[2].caption : ''}
-                  </h6>
-                </Card.Text>
-                <Card.Text>
-                  <h6>Copyright:  {result.multimedia && result.multimedia[2] ? result.multimedia[2].copyright : 'free'}</h6>
-                </Card.Text>
+          <Grid xs={6} sm={3}>
+            <Card
+            >
+              <Card.Body css={{ p: 0 }}>
+                <Card.Image
+                  objectFit="cover"
+                  width="100%"
+                  height={'auto'}
+                  src={result.multimedia && result.multimedia[2] ? result.multimedia[2].url : `https://via.placeholder.com/600/101824`} alt={result.title}
+                />
               </Card.Body>
+              <Card.Footer css={{ justifyItems: "flex-start" }}>
+                <Row wrap="wrap" justify="space-between" align="center">
+                  <Text b>{result.title}</Text>
+                  <Text css={{ color: "$accents7", fontWeight: "$semibold", fontSize: "$sm" }}>
+                    {result.multimedia && result.multimedia[2] ? result.multimedia[2].caption : ''}
+                  </Text>
+                  <Text css={{ color: "$accents8", fontSize: "$sm" }}>
+                    Copyright:  {result.multimedia && result.multimedia[2] ? result.multimedia[2].copyright : 'free'}
+                  </Text>
+                </Row>
+              </Card.Footer>
             </Card>
-          </Col>
+          </Grid>
         ))}
-      </Row>
-    </Container>
+      </Grid.Container>
+    </>
   )
 }
 

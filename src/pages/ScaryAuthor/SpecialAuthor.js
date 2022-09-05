@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
 import { Carousel } from 'primereact/carousel';
 import './Scary.css';
-import { ScaryContext } from '../context/ScaryContext'
+import { ScaryContext } from '../../context/ScaryContext'
 import { Spacer } from "@nextui-org/react";
 import { Card, Col, Text } from "@nextui-org/react";
-import scary from '../assets/scary.jpg'
+import scary from '../../assets/scary.jpg'
 
 
 const SpecialAuthor = () => {

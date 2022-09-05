@@ -4,7 +4,7 @@ import FakeAds from './FakeAds'
 import Ads from './Ads'
 import Menu from './Menu'
 import Games from './Games'
-import SpecialAuthor from '../pages/SpecialAuthor'
+import SpecialAuthor from '../pages/ScaryAuthor/SpecialAuthor'
 import { Spacer } from "@nextui-org/react";
 import { ScaryProvider } from '../context/ScaryContext'
 
